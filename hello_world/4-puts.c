@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * cette commande permet d'ecrire
+ * main: Prints "Programming is like building a multilingual puzzle
  */
 
 int main(void)
