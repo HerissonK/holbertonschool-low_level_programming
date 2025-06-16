@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * cette commande permet d'ecrire 
+ * cette commande permet d'ecrire
  */
 
 int main(void)
