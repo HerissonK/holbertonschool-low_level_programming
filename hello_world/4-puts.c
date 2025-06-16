@@ -1,5 +1,5 @@
 /**
- *  File: 4-puts.c
+ *  File: 4-puts.c.
  */
 
 #include <stdio.h>
@@ -7,7 +7,7 @@
 /**
  * Main - Prints "Programming is like building a multilingual puzzle.
  *
- * Return: Always 0 (Success)
+ * Return: Always 0 (Success).
  */
 
 int main(void)
