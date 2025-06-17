@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+/**
+ * main - print the alphabet in lowercase, followed by a new line.
+ *
+ * Return: Always 0
+ */
+
+int main(void)
+{
+
+	int num = 0;
+		do {
+			putchar('0' + num);
+	num++;
+
+		} while (num < 9);
+		putchar(',');
+		putchar(' ');
+
+	putchar('\n');
+	return (0);
+}
