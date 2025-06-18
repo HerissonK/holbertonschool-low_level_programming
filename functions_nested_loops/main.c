@@ -8,6 +8,7 @@
 
 int main(void)
 {
+	_islower()
     print_alphabet_x10();
     print_alphabet();
     return (0);
