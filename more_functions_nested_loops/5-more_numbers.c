@@ -10,10 +10,10 @@ void more_numbers(void)
 {
 	int d, u;
 
-	for (d = 0; d <= 9; d++)
+	for (d = 0; d < 10; d++)
 	{
 		for (u = 0; u <= 14; u++)
-			if (d > 9)
+			if (u > 9)
 				_putchar((u / 10) + '0');
 		_putchar((u % 10) + '0');
 	}
