@@ -3,7 +3,8 @@
 /**
  * _strcpy - returns the length of a string
  *
- * @s: string
+ * @dest: where to write
+ * @src: where to get the string
  *
  * Return: returns lenght;
  */
