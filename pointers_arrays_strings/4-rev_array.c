@@ -1,29 +1,21 @@
 #include "main.h"
 
 /**
- * _reverse_array - returns the length of a string
+ * reverse_array - returns the length of a string
  *
- * @*a: where to write
- * @n: where to get the string
+ * @a: the array with character
+ * @n: the place in the array
  *
- * Return: returns lenght;
  */
 
 void reverse_array(int *a, int n)
 {
-	int len;
+	int i, temp;
 
-	for (n = 0; a[n] != '\0'; n++)
+	for (i = 0; i < n / 2; i++)
 	{
-		_putchar(a[n]);
+		temp = a[i];
+		a[i] = a[n - 1 - i];
+		a[n - 1 - i] = temp;
 	}
-
-	len = n;
-
-	for (n = len - 1; n >= 0; n--)
-	{
-		_putchar(a[n]);
-	}
-
-	_putchar('\n');
 }
