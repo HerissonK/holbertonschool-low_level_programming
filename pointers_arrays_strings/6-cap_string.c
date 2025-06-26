@@ -1,11 +1,12 @@
 #include "main.h"
 
 /**
- * reverse_array - returns the length of a string
+ * cap_string - start all words by an uppercase
  *
- * @a: the array with character
- * @n: the place in the array
+ * @s: the string to modify
+ * i: the place in the array
  *
+ * Return: return the character
  */
 
 char *cap_string(char *s)
@@ -14,7 +15,11 @@ char *cap_string(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[i - 1] == ' ' ||
+		if (i == 0 && s[i] >= 'a' && s[i] <= 'z')
+		{
+			s[i] = s[i] - 32;
+		}
+		else if (s[i - 1] == ' ' ||
 		    s[i - 1] == '\t' ||
 		    s[i - 1] == '\n' ||
 		    s[i - 1] == ',' ||
