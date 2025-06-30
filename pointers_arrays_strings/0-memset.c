@@ -1,9 +1,11 @@
 #include "main.h"
 
 /**
- * leet - returns the length of a string
+ * _memset - full a empty memory zone
  *
- * @s: the string to modify
+ * @s: the pointer
+ * @b: the octet to copy
+ * @n: numbers of octet
  *
  * Return: return the character if not in the leet array
  */
