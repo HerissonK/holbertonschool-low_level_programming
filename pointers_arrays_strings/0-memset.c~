@@ -1,0 +1,23 @@
+#include "main.h"
+
+/**
+ * leet - returns the length of a string
+ *
+ * @s: the string to modify
+ *
+ * Return: return the character if not in the leet array
+ */
+
+char *_memset(char *s, char b, unsigned int n)
+{
+	int s;
+	int b;
+	int n;
+
+	while (n)
+	{
+		s[n - 1] = b;
+		n--;
+	}
+	return (s);
+}
