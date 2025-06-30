@@ -10,10 +10,18 @@
  * Return: return the character if not in the leet array
  */
 
-char *_memcpy(char *dest, char *src, unsigned int n)
+char *_strchr(char *s, char c)
 {
 	int i;
-	for (i = 0; n; n++)
-		src[i] = dest [i];
-	return (src);
+
+	for (i = 0; (s[i] != c) && (s[i] != '\0'); i++)
+		;
+	if (s[i] == c)
+	{
+		return (s + i);
+	}
+	else
+	{
+		return (0);
+	}
 }
