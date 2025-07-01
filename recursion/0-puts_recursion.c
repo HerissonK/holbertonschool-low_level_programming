@@ -1,10 +1,9 @@
 #include "main.h"
 
 /**
- * print_diagsums - print the sum of the 2 diagonals
+ * _puts_recursion - prints a string, followed by a new line.
  *
- * @a: array to find numbers
- * @size: the size of the array
+ * @s: the string to copy
  */
 
 void _puts_recursion(char *s)
