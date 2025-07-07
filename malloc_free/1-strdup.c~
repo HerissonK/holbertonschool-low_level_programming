@@ -8,28 +8,35 @@
  * @size: the size of the array
  * @c: the caracter to put in the array
  *
+ * Return: return the array at the end or NULL if error or size 0
  */
 
-char *create_array(unsigned int size, char c)
+char *_strdup(char *str)
 {
 	char *a;
-	unsigned int i;
+	int i, c;
 
-	if (size == 0)
+	if (str == 0)
 	{
 		return (NULL);
 	}
 
-	a = malloc(size * sizeof(*a));
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		;
+	}
+
+	a = malloc(i * sizeof(*a) + 1);
 	if (a == NULL)
 	{
 		return (NULL);
 	}
 
-	for (i = 0; i < size; i++)
+	for (c = 0; c < i; c++)
 	{
-		a[i] = c;
+		a[c] = str[c];
 	}
+	a[c] = '\0';
 
 	return (a);
 }
