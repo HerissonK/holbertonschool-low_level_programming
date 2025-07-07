@@ -1,0 +1,25 @@
+#include "main.h"
+#include <stdlib.h>
+#include <stddef.h>
+
+/**
+ * malloc_checked - allocate memory
+ *
+ * @b: amount of memory needed
+ *
+ * Return: the allocated memory or NULL if error
+ */
+
+void *malloc_checked(unsigned int b)
+{
+	void *p;
+
+	p = malloc(b);
+
+	if (p == NULL)
+	{
+		exit(98);
+	}
+
+	return (p);
+}
