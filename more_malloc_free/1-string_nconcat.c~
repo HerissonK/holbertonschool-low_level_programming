@@ -3,14 +3,16 @@
 #include <stddef.h>
 
 /**
- * malloc_checked - allocate memory
+ * string_nconcat - concatenates two strings
  *
- * @b: amount of memory needed
+ * @s1: first string to concatenate
+ * @s2: seconde string to concatenate
+ * @n: number of bytes
  *
  * Return: the allocated memory or NULL if error
  */
 
-void *_calloc(unsigned int nmemb, unsigned int size)
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i, j, len1, len2;
 	char *str;
