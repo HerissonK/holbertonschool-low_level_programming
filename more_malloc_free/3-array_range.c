@@ -27,11 +27,11 @@ int *array_range(int min, int max)
 	else
 	{
 		p = malloc(sizeof(int) * (max - min + 1));
-		if (p == 0)
+		if (p == NULL)
 		{
 			return (NULL);
 		}
-		for (i = 0; min <= max; min++)
+		for (i = 0; min <= max; i++, min++)
 		{
 			p[i] = min;
 		}
