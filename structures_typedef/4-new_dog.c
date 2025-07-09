@@ -20,7 +20,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	while (name[lenname++])
 		;
-	while (owner[lenowner])
+	while (owner[lenowner++])
 		;
 
 	newdog = malloc(sizeof(dog_t));
