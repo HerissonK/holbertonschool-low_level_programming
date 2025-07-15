@@ -1,6 +1,13 @@
 #ifndef _HEADER_
 #define _HEADER_
 
+/**
+ * struct op - the list of all opperations
+ *
+ * @op: the operation
+ * @f: the function to execute
+ */
+
 typedef struct op
 {
 	char *op;

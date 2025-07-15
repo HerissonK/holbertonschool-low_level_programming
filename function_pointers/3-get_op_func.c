@@ -3,6 +3,14 @@
 #include <string.h>
 #include <stdlib.h>
 
+/**
+ * get_op_func - operate 2 int
+ *
+ * @s: the oprator
+ *
+ * Return: the good function to use
+ */
+
 int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {

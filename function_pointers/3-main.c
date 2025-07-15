@@ -2,7 +2,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main (int argc, char *argv[])
+/**
+ * main - print the result of the opp
+ *
+ * @argc: the array of opp
+ * @argv: the place in the array
+ *
+ * Return: the result of Error if there is an error
+ */
+
+
+int main(int argc, char *argv[])
 {
 	int (*opp)(int, int);
 
@@ -21,5 +31,5 @@ int main (int argc, char *argv[])
 	}
 
 	printf("%d\n", opp(atoi(argv[1]), atoi(argv[3])));
-	return(0);
+	return (0);
 }
