@@ -1,0 +1,33 @@
+#include "variadic_functions.h"
+#include <stdarg.h>
+#include <stdio.h>
+
+/**
+ * sum_them_all - returns the sum of all its parameters
+ *
+ * @n: numbers to add
+ *
+ * Return: the sum or ERROR
+ */
+
+void print_numbers(const char *separator, const unsigned int n, ...)
+{
+	unsigned int i;
+
+	va_list print;
+
+	if (n > 0)
+	{
+		va_start(print, n);
+		for (i = 0; i < n; i++)
+		{
+			printf("%d", va_arg(print, int));
+			if (separator != NULL && i <n - 1)
+			{
+				printf("%s", separator);
+			}
+		}
+		va_end(print);
+		printf("\n");
+	}
+}
