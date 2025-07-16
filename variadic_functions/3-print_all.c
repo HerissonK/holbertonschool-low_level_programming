@@ -36,39 +36,33 @@ void printf_str(va_list str)
 }
 void print_all(const char * const format, ...)
 {
-	const char *ptr;
-	va_list liste;
-
-	array checker[4] = {
+	funckey checker[4] = {
 		{printf_char, 'c'},
 		{printf_int, 'i'},
 		{printf_float, 'f'},
 		{printf_str, 's'}
 	};
 
-	int i, j = 0;
+	va_list liste;
+	unsigned int i = 0, j;
+	char *separator = "";
 
-	ptr = format;
 	va_start(liste, format);
 
-	while (format && *ptr)
+	while (format && format[i])
 	{
-		for (i = 0; i < 4; i++)
+		for (j = 0; j < 4; j++)
 		{
-			if (*ptr == checker[i].spec)
+			if (format[i] == checker[j].spec)
 			{
-				if (j)
-				{
-					printf(", ");
-				}
-				checker[i].f(liste);
-				j = 1;
+				printf("%s", separator);
+				checker[j].f(liste);
+				separator = ", ";
 				break;
 			}
-			
 		}
-		ptr ++;
+		i++;
 	}
-	printf("\n");
 	va_end(liste);
+	printf("\n");
 }
