@@ -3,27 +3,41 @@
 #include <stdlib.h>
 
 /**
- * main - print the result of the opp
- *
- * @argc: the array of opp
- * @argv: the place in the array
- *
- * Return: the result of Error if there is an error
+ * printf_char - print a char
+ * @liste: list to print
  */
 
 void printf_char(va_list liste)
 {
 	printf("%c", (char)va_arg(liste, int));
 }
+
+/**
+ * printf_int - print an int
+ * @liste: list to print
+ */
+
 void printf_int(va_list liste)
 {
 	printf("%d", va_arg(liste, int));
 }
+
+/**
+ * printf_float - print a float
+ * @liste: list to print
+ */
+
 void printf_float(va_list liste)
 {
 	printf("%f", (float)va_arg(liste, double));
 }
-void printf_str(va_list str)
+
+/**
+ * printf_str - print a string
+ * @liste: print a list
+ */
+
+void printf_str(va_list liste)
 {
 	char *string = va_arg(str, char*);
 
@@ -34,6 +48,12 @@ void printf_str(va_list str)
 	else
 		printf("%s", string);
 }
+
+/**
+ * print_all - print various type of format
+ * @format: string withe the type information
+ */
+
 void print_all(const char * const format, ...)
 {
 	funckey checker[4] = {
