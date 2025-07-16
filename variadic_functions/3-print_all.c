@@ -39,15 +39,16 @@ void printf_float(va_list liste)
 
 void printf_str(va_list liste)
 {
-	char *string = va_arg(liste, char*);
+	char *str = va_arg(list, char*);
 
-	if (string == NULL)
+	while (str != NULL)
 	{
-		printf("(nil)");
+		printf("%s", str);
+		return;
 	}
-	else
-		printf("%s", string);
+	printf("(nil)");
 }
+
 
 /**
  * print_all - print various type of format
