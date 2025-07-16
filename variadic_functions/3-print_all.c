@@ -60,11 +60,12 @@ void print_all(const char * const format, ...)
 				if (j)
 				{
 					printf(", ");
-					checker[i].f(liste);
-					j = 1;
-					break;
 				}
+				checker[i].f(liste);
+				j = 1;
+				break;
 			}
+			
 		}
 		ptr ++;
 	}
