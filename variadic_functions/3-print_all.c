@@ -39,7 +39,7 @@ void printf_float(va_list liste)
 
 void printf_str(va_list liste)
 {
-	char *string = va_arg(str, char*);
+	char *string = va_arg(liste, char*);
 
 	if (string == NULL)
 	{
