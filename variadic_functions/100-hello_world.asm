@@ -7,7 +7,7 @@ main:
     mov	rax, 1
     mov	rdi, 1
     mov	rsi, msg
-    mov	rdx, 17
+    mov	rdx, len
     syscall
 
     mov rax, 60
