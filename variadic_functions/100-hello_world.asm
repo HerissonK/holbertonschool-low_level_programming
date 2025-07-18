@@ -1,16 +1,20 @@
-	section .data
-msg:	db	"hello, Holberton",10
+	global start
 
 	section .text
-	global _start
 
-_start:
-	mov rax, 1
-	mov rdi, 1
-	mov rsi, msg
-	mov rdx, 17
+start:
+	mov     rax, 0x2000004 ; write
+	mov     rdi, 1 ; stdout
+	mov     rsi, msg
+	mov     rdx, msg.len
 	syscall
 
-	mov rax, 60
-	xor rdi, rdi
+	mov     rax, 0x2000001 ; exit
+	mov     rdi, 0
 	syscall
+
+
+section .data
+
+msg:    db      "Hello, world!", 10
+.len:   equ     $ - msg
