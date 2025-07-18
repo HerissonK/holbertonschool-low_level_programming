@@ -1,0 +1,20 @@
+section .data
+    msg db "Hello, world!", 10
+    len equ $ - msg
+
+section .text
+    global main
+
+main:
+    ; write(stdout, msg, len)
+    mov eax, 4          ; syscall number for write (NOT USED on Windows, but required if you use C stdio)
+    mov edi, 1          ; file descriptor (stdout)
+    mov rsi, msg        ; message
+    mov edx, len        ; message length
+
+    ; Using C printf from stdio (alternative)
+    ; But here you typically call printf from C directly, or use MessageBoxA via Windows API
+
+    ; just return 0
+    mov eax, 0
+    ret
