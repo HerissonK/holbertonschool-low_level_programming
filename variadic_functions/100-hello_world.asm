@@ -1,15 +1,18 @@
 section .data
-	msg db "Hello, World", 13, 10
-	len equ $ -msg
+	msg db "Hello, World", 10      ; 10 = saut de ligne
+	len equ $ - msg
 
-section .text
-	global _start
+	section .text
+	global main
+	extern write, exit
 
-_start:
-	mov edx, len
-	mov ecx, msg
-	mov ebx, 1
-	mov eax, 4
-	int 0x80
-	mov eax, 1
-	int 0x80
+main:
+				; Appel write(1, msg, len)
+	mov edi, 1         ; int fd = 1 (stdout)
+	mov rsi, msg       ; const void *buf = msg
+	mov edx, len       ; size_t count = len
+	call write
+
+	; Appel exit(0)
+	xor edi, edi       ; int status = 0
+	call exit
