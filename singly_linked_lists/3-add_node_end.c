@@ -5,16 +5,17 @@
 #include <string.h>
 
 /**
- * print_list - print all the element from a list "list_t"
+ * add_node - adds a new node at the beginning of a list_t list
  *
- * @h: current node
+ * @head: head of the linked list
+ * @str: string to store and them to print
  *
  * Return: the number of nodes
  */
 
-list_t *add_node(list_t **head, const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new_node;
+	list_t *new_node, *tmp ;
 	unsigned int len = 0;
 
 	if (str == NULL)
@@ -36,8 +37,17 @@ list_t *add_node(list_t **head, const char *str)
 	}
 
 	new_node->len = len;
-	new_node->next = *head;
+	new_node->next = NULL;
 
-	*head = new_node;
+	if (*head == NULL)
+	{
+		*head = new_node;
+		return (new_node);
+	}
+	tmp = *head;
+	while (tmp->next != NULL)
+		tmp = tmp->next;
+
+	tmp->next = new_node;
 	return (new_node);
 }
