@@ -3,11 +3,19 @@
 
 #include <stddef.h>
 
+/**
+ * struct list_s - struct use to chained nodes
+ *
+ * @str: the string to print
+ * @len: the of the string to return
+ * @next: the link to the next node
+ */
+
 typedef struct list_s
 {
-    char *str;
-    unsigned int len;
-    struct list_s *next;
+	char *str;
+	unsigned int len;
+	struct list_s *next;
 } list_t;
 
 size_t print_list(const list_t *h);
