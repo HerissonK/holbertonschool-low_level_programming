@@ -5,12 +5,9 @@
 #include <string.h>
 
 /**
- * add_node_end - adds a new node at the end of a list_t list
+ * free_list - frees a list_t list
  *
- * @head: head of the linked list
- * @str: string to store and them to print
- *
- * Return: the number of nodes
+ * @head: the start of the chain
  */
 
 void free_list(list_t *head)
