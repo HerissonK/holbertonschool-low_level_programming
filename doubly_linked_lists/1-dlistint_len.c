@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * print_dlistint - print all the element from a list "list_t"
+ * dlistint_len - print all the element from a list "list_t"
  *
  * @h: current node
  *
