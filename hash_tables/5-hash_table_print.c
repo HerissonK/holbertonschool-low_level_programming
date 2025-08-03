@@ -1,8 +1,10 @@
 #include "hash_tables.h"
+
 /**
   * hash_table_print - print the hash table
   * @ht: the hash table
   */
+
 void hash_table_print(const hash_table_t *ht)
 {
 	unsigned long int i, j;
@@ -19,8 +21,7 @@ void hash_table_print(const hash_table_t *ht)
 			tmp = ht->array[i];
 			while (tmp)
 			{
-				printf("%s'%s': '%s'", j == 0 ? "" : ", ",
-				       tmp->key, tmp->value), j++;
+				printf("%s'%s': '%s'", j == 0 ? "" : ", ", tmp->key, tmp->value), j++;
 				tmp = tmp->next;
 			}
 		}
